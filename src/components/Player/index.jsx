@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
-const Player = ({ initialName, symbol, isActive }) => {
+const Player = ({ initialName, symbol, isActive, onNameChange }) => {
   const [isEditing, setIsEditing] = useState();
   const [playerName, setPlayerName] = useState(initialName);
 
   const handleEditClick = () => {
     setIsEditing((prevState) => !prevState);
+    if (isEditing) {
+      onNameChange(symbol, playerName);
+    }
   };
   let buttonLabel = isEditing ? 'Save' : 'Edit';
 
