@@ -6,6 +6,14 @@ Players can rename themselves, see whose turn it is, review the move log, and re
 
 > **Follow-along project.** This app was built while following **React — The Complete Guide (Academind / Maximilian Schwarzmüller)**. It is included in the portfolio as a learning exercise, not as a production product. The implementation is my own work based on the course material.
 
+## Live demo
+
+| | |
+| --- | --- |
+| **Live site** | https://mariogranada.github.io/tic-tac-toe/ |
+| **Repository** | https://github.com/MarioGranada/tic-tac-toe |
+| **Portfolio summary** | Two-player tic-tac-toe in React where the board, active player and winner are all derived from a single turn history, with editable player names and a move log. |
+
 ## Features
 
 - Three-by-three game board with disabled occupied squares.
@@ -94,6 +102,7 @@ A draw is `gameTurns.length === 9 && !winner`. The game-over overlay renders whe
 
 ## Deployment
 
+- **Live:** `.github/workflows/deploy.yml` builds the app on every push to the default branch and publishes `dist/` (plus a `404.html` SPA fallback) to the `gh-pages` branch, which GitHub Pages serves at https://mariogranada.github.io/tic-tac-toe/.
 - Target: GitHub Actions can build the Vite app and publish `dist/` to GitHub Pages.
 - Set the Vite `base` option to the repository path for a project Pages site.
 - No backend, routing, or database is required.
